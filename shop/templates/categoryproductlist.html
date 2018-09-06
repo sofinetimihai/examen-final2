@@ -8,7 +8,7 @@
     <tr>
     <td width="300px" style="border: 0px">
         {% for category in categories %}
-            <a href="#">{{ category.name }} <br /> </a>
+            <a href="http://localhost:8000/shop/category/{{category.id}}">{{ category.name }} <br /> </a>
         {% endfor %}
     </td>
     <td>
