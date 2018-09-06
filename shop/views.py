@@ -4,8 +4,10 @@ from .models import Category, Product
 # Create your views here.
 def product_list(request):
     products = Product.objects.all()
+    categories = Category.objects.all()
     context = {
-        'products': products
+        'products': products,
+        'categories': categories
     }
     return render(request, 'list.html', context)
 
