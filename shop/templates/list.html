@@ -4,13 +4,23 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-{% for category in categories %}
-    <a href="#">{{ category.name }} <br /> </a>
-{% endfor %}
+<table>
+    <tr>
+    <td width="300px" style="border: 0px">
+        {% for category in categories %}
+            <a href="#">{{ category.name }} <br /> </a>
+        {% endfor %}
+    </td>
+    <td>
+        {% for product in products %}
+            <a href="produs/?id={{product.id}}">{{product.name}}</a> </br>
+        {% endfor %}
+    </td>
+    </tr>
+</table>
+
 <br />
 <br />
-{% for product in products %}
-    <a href="produs/?id={{product.id}}">{{product.name}}</a> </br>
-{% endfor %}
+
 </body>
 </html>
