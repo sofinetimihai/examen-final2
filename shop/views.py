@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Category, Product
+from cart.forms import CartAddProductForm
 
 # Create your views here.
 def product_list(request):
@@ -23,7 +24,9 @@ def product_detail(request, productid):
     id = productid
     produs = Product.objects.get(pk=int(id))
     print(produs.id)
+    cart_product_form = CartAddProductForm()
     context = {
-        'produs': produs
+        'produs': produs,
+        'cart_product_form': cart_product_form,
     }
     return render(request, 'produs.html', context)
