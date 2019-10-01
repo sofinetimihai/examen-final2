@@ -32,6 +32,19 @@
     {% endwith %}
  {% endfor %}
 Pretul total este: {{ cart.get_total_price }}
+
+ </br>
+ </br>
+
+ <!--<form action="{% url "order:home"  %}" method="post">-->
+    <!--{% csrf_token %}-->
+    <!--{{ cart_product_form }}-->
+    <!--<input type="submit" value="Comanda produsele" class="btn btn-primary">-->
+<!--</form>-->
+
+<a href="{% url "order:home" %}"> Comanda produsele</a>
+
+
 </body>
 
 </html>

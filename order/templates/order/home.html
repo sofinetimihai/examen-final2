@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/order/comanda_plasata/" method="POST">{% csrf_token %}
+    <table>
+        <tr>
+            <td>First Name</td>
+            <td><input type="text" name="firstname"></td>
+        </tr>
+        <tr>
+            <td>Last name</td>
+            <td><input type="text" name="lastname"></td>
+        </tr>
+        <tr>
+            <td>Adresa de livrare</td>
+            <td><input type="text" name="adresa"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" name="adauga" value="Adauga"></td>
+        </tr>
+    </table>
+</form>
+
+{% if sesiune %}
+    {{ sesiune }}
+{% endif %}
+
+
+
+</body>
+</html>
